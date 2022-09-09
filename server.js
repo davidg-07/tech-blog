@@ -1,8 +1,9 @@
+const path = require('path');
 const express = require('express');
+const session = require('express-session');
 const router = require('./controllers/');
 const hbsExpress = require('express-handlebars');
 const app = express();
-const path = require('path');
 const hbs = hbsExpress.create();
 
 app.engine('handlebars', hbs.engine);
@@ -14,3 +15,15 @@ app.use(router);
 app.listen(3001, () => {
     console.log('app is listening on port 3001')
 });
+
+const sess = {
+    secret: 'Super secret secret',
+    cookie: {},
+    resave: false,
+    saveUninitialized: true,
+    store: new ({
+      db: sequelize
+    })
+  };
+
+  app.use(session(sess));
