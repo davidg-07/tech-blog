@@ -18,12 +18,12 @@ app.listen(3001, () => {
 
 const sess = {
     secret: 'Super secret secret',
-    cookie: {},
+    // cookie: {},
     resave: false,
     saveUninitialized: true,
-    store: new ({
-      db: sequelize
-    })
+    // store: new ({
+    // //   db: sequelize
+    // })
   };
 
   app.use(session(sess));
