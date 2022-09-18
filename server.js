@@ -12,9 +12,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(router);
 
-app.listen(3001, () => {
-    console.log('app is listening on port 3001')
-});
+
 
 const sess = {
     secret: 'Super secret secret',
@@ -27,3 +25,8 @@ const sess = {
   };
 
   app.use(session(sess));
+  
+  
+  app.listen(3001, () => {
+    console.log('app is listening on port 3001')
+});
