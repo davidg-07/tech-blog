@@ -40,5 +40,8 @@ THEN I am signed out of the site
 WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 
-### Questions
+## Dployed page
+https://tech-blog-dmg.herokuapp.com/
+
+## Questions
 If you have any questions about this projects, please contact me directly at david.dmg17@gmail.com. You can view more of my projects at https://github.com/davidg-07.
